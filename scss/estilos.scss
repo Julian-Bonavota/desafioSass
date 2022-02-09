@@ -1,0 +1,111 @@
+$color-principal: #DAF7A6;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*estilos del menu*/
+body{
+    background-color: $color-principal;
+    .contenedor{
+        height: 100vh;
+    display: grid;
+    grid-template-areas:"header header"
+                         "main  main"
+                         "footer footer";
+    justify-content: center ;
+    }
+    header{
+        grid-area: header;
+    text-align: center;
+    margin-bottom: 20px;
+        h1{
+            text-decoration: none;
+            color: black;
+            margin-bottom: 50px;
+        }
+    }
+    nav{
+        justify-self: center;
+        ul{
+            display: flex;
+            list-style: none;
+            margin-bottom: 30px;        
+            li{
+                a{
+                    text-decoration: none;
+                    color: black;
+                    margin: 10px;
+                    background-color: white;
+                    border-radius: 50px;
+                    padding: 5px;
+                }
+            }
+            li:hover{
+                transform: scale(1.6);
+                transition: 1s;            
+            }
+        }
+    }
+    /*fin de estilos del menu*/
+    /*home*/
+    main{
+        grid-area: main;
+        .imagenHerr{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+            width: 500px;        
+        }
+    }
+    footer{
+        grid-area: footer;
+        p{
+            text-align: center;
+            margin-top: 20px;
+        }
+    }
+    /*herramientas electricas*/
+    main{
+        section{
+            display: grid;
+            justify-content: center;
+        
+            img{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            margin-top: 50px;
+            width: 300px;
+            }
+            p{
+                text-decoration: none;
+                text-align: center;
+                margin-bottom: 20px;
+                color: black;            
+            }
+        }
+    }
+    .mainHerramientas{
+        h2{
+            text-decoration: none;
+            justify-content: center;
+        }
+    }
+    @media screen and (max-width:768px) and (min-width: 320px) {
+        header{
+            margin-bottom: 5px;
+        }
+        main p{
+            text-align: center;
+        }
+        .imagenHerr{
+            display: flex;
+            width: 100px;
+            justify-self: center;
+        }
+        nav ul li a{
+            margin: 5px;
+        }
+    }    
+}
